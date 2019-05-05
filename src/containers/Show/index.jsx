@@ -5,9 +5,7 @@ import { withStyles } from "@material-ui/core/styles";
 import compose from "recompose/compose";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Chip from "@material-ui/core/Chip";
 import Parser from "html-react-parser";
@@ -71,14 +69,6 @@ class Show extends React.PureComponent<Props> {
                 image={data.image.original}
                 title={data.name}
               />
-              <CardActions>
-                <Button size="small" color="primary">
-                  Share
-                </Button>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
-              </CardActions>
             </Card>
           </Grid>
 
@@ -109,7 +99,7 @@ class Show extends React.PureComponent<Props> {
               schedule={data.schedule}
               status={data.status}
               type={data.type}
-              rating={data.rating}
+              rating={data.rating.average}
             />
           </Grid>
 

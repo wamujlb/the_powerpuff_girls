@@ -8,11 +8,13 @@ import Done from "@material-ui/icons/Done";
 import Movie from "@material-ui/icons/Movie";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
+import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import lightBlue from "@material-ui/core/colors/lightBlue";
 
 import Item from "./Item";
+import Rating from "../../Rating";
 
 type Props = {
   classes: Object,
@@ -42,6 +44,7 @@ function ShowInfo({
   schedule,
   status,
   type,
+  rating,
 }: Props): React$Element<typeof List> {
   return (
     <Card>
@@ -73,6 +76,10 @@ function ShowInfo({
         <Item icon={Done} primaryText={status} secondaryText="Status" />
         <Item icon={Movie} primaryText={type} secondaryText="Type" />
       </List>
+
+      <CardContent>
+        <Rating value={rating} />
+      </CardContent>
     </Card>
   );
 }
