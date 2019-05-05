@@ -57,8 +57,6 @@ class Show extends React.PureComponent<Props> {
       return <Loading />;
     }
 
-    console.log(data)
-
     return (
       data &&
       <Main>
